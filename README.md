@@ -17,4 +17,4 @@ In this project i would attempt face recognition with convoluted neural nets .
 #### sould not make any difference since i would need to start from scratch
 
 --------------------
-sooooo i watched some videos anout these algorithms found a good repo named 'darkflow' cloning it and would be implementing it.
+sooooo i watched some videos about these algorithms found a good repo named 'darkflow' cloning it and would be implementing it.
