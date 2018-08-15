@@ -6,6 +6,7 @@ In this project i would attempt face recognition with convoluted neural nets .
 
 ### Steps i went through:
     First go through [this]:https://cv-tricks.com/object-detection/faster-r-cnn-yolo-ssd/
+    https://www.youtube.com/watch?v=4eIBisqx9_g
     
     to detect an object we use some technique to find objects inside an image like:
       1).Sliding window --> we slide a window over an image and use cnn to find object in the window
