@@ -45,3 +45,4 @@ ckpt/*
 #pytest cache
 .cache/
 *.mp4
+working/
