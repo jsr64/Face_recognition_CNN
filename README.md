@@ -13,8 +13,9 @@ In this project i would attempt face recognition with convoluted neural nets .
       2).RCNN
       3).SSD
       4).YOLO
-### i would be using YOLO just because it sounds good and i have no hands on experience with No 2,3,4
+### I would be using YOLO just because it sounds good and i have no hands on experience with No 2,3,4
 #### sould not make any difference since i would need to start from scratch
 
 --------------------
 sooooo i watched some videos about these algorithms found a good repo named 'darkflow' cloning it and would be implementing it.
+REPO : https://github.com/thtrieu/darkflow
