@@ -21,7 +21,7 @@ y_train = dataset[:,0]
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(5, 5), strides=(1, 1),
                  activation='relu',
-                 input_shape=(1,90,90)))
+                 input_shape=(1,90,90), data_format='channels_first'))
 model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
 model.add(Conv2D(64, (5, 5), activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
