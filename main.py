@@ -4,6 +4,9 @@ from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D, MaxPooling2D
 import pandas as pd
 from sklearn.utils import shuffle
+from keras.utils import to_categorical
+
+
 # import tensorflow as tf
 # tf.control_flow_ops = tf
 
@@ -18,6 +21,7 @@ dataset = pd.read_csv("data/train.csv").values
 trainX = dataset[:,1:].reshape(dataset.shape[0],1,90,90).astype( 'float32' )
 # y_train = y_train[:,0]
 y_train = dataset[:,0]
+y_train = to_categorical(y_train)
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(5, 5), strides=(1, 1),
                  activation='relu',
@@ -27,7 +31,7 @@ model.add(Conv2D(64, (5, 5), activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Flatten())
 model.add(Dense(1000, activation='relu'))
-model.add(Dense(1, activation='softmax'))
+model.add(Dense(2, activation='softmax'))
 model.compile(loss=keras.losses.categorical_crossentropy,
               optimizer=keras.optimizers.SGD(lr=0.01),
               metrics=['accuracy'])
