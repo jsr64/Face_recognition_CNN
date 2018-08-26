@@ -31,4 +31,4 @@ so now i have got a good idea about darkflow.
 Right now i am stuck at generating my own dataset of my image...have collected 100 images of myself then i would be appliing some transformations on those images to generate more image so as to increase my data set.
 
 
-finally created a csv file for training my model....now all that is left is a model -_-
+finally created a csv file for training my model....now creating model using keras api
