@@ -13,6 +13,7 @@ result = tfnet.return_predict(imgcv)
 print(result)
 print(imgcv.shape[0])   #height widhth channel
 print(result[0]["label"])
+i=0
 for person in result:
     topleft_x = person['topleft']['x']
     topleft_y = person['topleft']['y']
@@ -24,10 +25,11 @@ for person in result:
         topleft_y = int(topleft_y - (imgcv.shape[0] * 0.1))
     bottomright_y = int(bottomright_y - (imgcv.shape[0] * 0.1))
     img = cv2.rectangle(imgcv, (topleft_x, topleft_y), (bottomright_x, bottomright_y), (0, 255, 0), 5)
+    crop_img = img[topleft_y:bottomright_y, topleft_x:bottomright_x]
+    cv2.imwrite('test-result'+str(i)+'.png', crop_img)
+    i=i+1
 
 cv2.imwrite('test-result.png',img)
-
-
 img = Image.open('test-result.png').convert('L')
 img = img.resize((90, 90))
 img.save('test-result.png')
